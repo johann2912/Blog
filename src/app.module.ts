@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { PgDatabaseModule } from './frameworks/pg/pg-data.module';
 import { RedisModule } from './frameworks/redis/redis.module';
+import { UserModule } from './module/user/user.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { RedisModule } from './frameworks/redis/redis.module';
     }),
     PgDatabaseModule,
     RedisModule,
+    UserModule,
   ],
   controllers: [],
   providers: [],
