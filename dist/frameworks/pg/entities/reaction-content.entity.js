@@ -9,40 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SharedContent = void 0;
+exports.ReactionContent = void 0;
 const timestamp_entity_1 = require("./timestamp.entity");
 const typeorm_1 = require("typeorm");
 const user_entity_1 = require("./user.entity");
-const reaction_content_entity_1 = require("./reaction-content.entity");
-let SharedContent = class SharedContent extends timestamp_entity_1.Timestamp {
+const shared_content_entity_1 = require("./shared-content.entity");
+let ReactionContent = class ReactionContent extends timestamp_entity_1.Timestamp {
 };
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
     __metadata("design:type", String)
-], SharedContent.prototype, "id", void 0);
+], ReactionContent.prototype, "id", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: Number }),
+    __metadata("design:type", Number)
+], ReactionContent.prototype, "typeReaction", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: String }),
     __metadata("design:type", String)
-], SharedContent.prototype, "image", void 0);
+], ReactionContent.prototype, "commentary", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: String }),
-    __metadata("design:type", String)
-], SharedContent.prototype, "tittle", void 0);
+    (0, typeorm_1.OneToMany)((_type) => shared_content_entity_1.SharedContent, sharedContent => sharedContent.reactionContent),
+    __metadata("design:type", shared_content_entity_1.SharedContent)
+], ReactionContent.prototype, "sharedContent", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: String }),
-    __metadata("design:type", String)
-], SharedContent.prototype, "description", void 0);
-__decorate([
-    (0, typeorm_1.ManyToOne)((_type) => user_entity_1.User, user => user.sharedContent),
+    (0, typeorm_1.OneToMany)((_type) => user_entity_1.User, user => user.reactionContent),
     __metadata("design:type", user_entity_1.User)
-], SharedContent.prototype, "user", void 0);
-__decorate([
-    (0, typeorm_1.ManyToOne)((_type) => reaction_content_entity_1.ReactionContent, reactionContent => reactionContent.sharedContent),
-    __metadata("design:type", reaction_content_entity_1.ReactionContent)
-], SharedContent.prototype, "reactionContent", void 0);
-SharedContent = __decorate([
+], ReactionContent.prototype, "user", void 0);
+ReactionContent = __decorate([
     (0, typeorm_1.Entity)()
-], SharedContent);
-exports.SharedContent = SharedContent;
+], ReactionContent);
+exports.ReactionContent = ReactionContent;
 ;
-//# sourceMappingURL=shared-content.entity.js.map
+//# sourceMappingURL=reaction-content.entity.js.map

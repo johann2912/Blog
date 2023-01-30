@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
+const reaction_content_entity_1 = require("./reaction-content.entity");
 const shared_content_entity_1 = require("./shared-content.entity");
 const timestamp_entity_1 = require("./timestamp.entity");
 const typeorm_1 = require("typeorm");
@@ -44,9 +45,13 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
-    (0, typeorm_1.OneToMany)((_type) => shared_content_entity_1.SharedContent, sharedContent => sharedContent),
+    (0, typeorm_1.OneToMany)((_type) => shared_content_entity_1.SharedContent, sharedContent => sharedContent.user),
     __metadata("design:type", shared_content_entity_1.SharedContent)
-], User.prototype, "user", void 0);
+], User.prototype, "sharedContent", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)((_type) => reaction_content_entity_1.ReactionContent, reactionContent => reactionContent.user),
+    __metadata("design:type", reaction_content_entity_1.ReactionContent)
+], User.prototype, "reactionContent", void 0);
 User = __decorate([
     (0, typeorm_1.Entity)()
 ], User);

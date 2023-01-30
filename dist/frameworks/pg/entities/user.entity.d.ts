@@ -1,3 +1,4 @@
+import { ReactionContent } from "./reaction-content.entity";
 import { SharedContent } from "./shared-content.entity";
 import { Timestamp } from "./timestamp.entity";
 export declare class User extends Timestamp {
@@ -8,5 +9,6 @@ export declare class User extends Timestamp {
     documentNumber?: string;
     email?: string;
     password?: string;
-    user?: SharedContent;
+    sharedContent?: SharedContent;
+    reactionContent?: ReactionContent;
 }
