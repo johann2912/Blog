@@ -22,7 +22,7 @@ export class SharedContentController {
         @Session() payload: IAccess
     ) {
         const sharedContent = await this.sharedContentService.allSharedContent(payload.id);
-        return plainToClass(SharedContentCreateOutputDto, sharedContent, { excludeExtraneousValues: true });
+        return sharedContent
     };
     @Get('by-nickname/:nickname')
     @UseGuards(AccessGuard)

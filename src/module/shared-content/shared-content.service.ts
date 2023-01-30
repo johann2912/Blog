@@ -14,7 +14,7 @@ export class SharedContentService {
     async allSharedContent(id: string) {
         await this.validateIsExistUser(id);
 
-        const allSharedContent = await this.databaseService.sharedContent.findAll();
+        const allSharedContent = await this.databaseService.sharedContent.findAllInformation();
         if (!allSharedContent.length) this.exceptions.notFoundException({
             message: 'Shared content does not found'
         });
