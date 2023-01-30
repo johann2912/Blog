@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { PgDatabaseModule } from './frameworks/pg/pg-data.module';
 import { RedisModule } from './frameworks/redis/redis.module';
 import { UserModule } from './module/user/user.module';
+import { AuthModule } from './module/auth/auth.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { UserModule } from './module/user/user.module';
     PgDatabaseModule,
     RedisModule,
     UserModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],

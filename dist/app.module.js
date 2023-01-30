@@ -12,6 +12,7 @@ const config_1 = require("@nestjs/config");
 const pg_data_module_1 = require("./frameworks/pg/pg-data.module");
 const redis_module_1 = require("./frameworks/redis/redis.module");
 const user_module_1 = require("./module/user/user.module");
+const auth_module_1 = require("./module/auth/auth.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -23,6 +24,7 @@ AppModule = __decorate([
             pg_data_module_1.PgDatabaseModule,
             redis_module_1.RedisModule,
             user_module_1.UserModule,
+            auth_module_1.AuthModule,
         ],
         controllers: [],
         providers: [],
