@@ -10,6 +10,7 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const pg_data_module_1 = require("./frameworks/pg/pg-data.module");
+const redis_module_1 = require("./frameworks/redis/redis.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -18,7 +19,8 @@ AppModule = __decorate([
             config_1.ConfigModule.forRoot({
                 isGlobal: true,
             }),
-            pg_data_module_1.PgDatabaseModule
+            pg_data_module_1.PgDatabaseModule,
+            redis_module_1.RedisModule,
         ],
         controllers: [],
         providers: [],
