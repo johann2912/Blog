@@ -15,7 +15,7 @@ export class SwaggerConfig {
             (even see the posts)
         `,
       )
-      .setVersion('v0.0.1')
+      .setVersion('v1.0.1')
       .build();
     const document = SwaggerModule.createDocument(app, config);
     SwaggerModule.setup('api/v1/blog/docs', app, document, {
