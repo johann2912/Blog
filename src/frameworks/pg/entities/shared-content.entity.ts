@@ -1,5 +1,5 @@
 import { Timestamp } from "./timestamp.entity";
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { User } from "./user.entity";
 import { ReactionContent } from "./reaction-content.entity";
 
@@ -17,7 +17,7 @@ export class SharedContent extends Timestamp {
         (_type) => User, user => user.sharedContent
     )
     user?: User;
-    @ManyToOne(
+    @OneToMany(
         (_type) => ReactionContent, reactionContent => reactionContent.sharedContent
     )
     reactionContent?: ReactionContent;

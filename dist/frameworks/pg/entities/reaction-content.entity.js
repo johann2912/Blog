@@ -29,11 +29,11 @@ __decorate([
     __metadata("design:type", String)
 ], ReactionContent.prototype, "commentary", void 0);
 __decorate([
-    (0, typeorm_1.OneToMany)((_type) => shared_content_entity_1.SharedContent, sharedContent => sharedContent.reactionContent),
+    (0, typeorm_1.ManyToOne)((_type) => shared_content_entity_1.SharedContent, sharedContent => sharedContent.reactionContent),
     __metadata("design:type", shared_content_entity_1.SharedContent)
 ], ReactionContent.prototype, "sharedContent", void 0);
 __decorate([
-    (0, typeorm_1.OneToMany)((_type) => user_entity_1.User, user => user.reactionContent),
+    (0, typeorm_1.ManyToOne)((_type) => user_entity_1.User, user => user.reactionContent),
     __metadata("design:type", user_entity_1.User)
 ], ReactionContent.prototype, "user", void 0);
 ReactionContent = __decorate([

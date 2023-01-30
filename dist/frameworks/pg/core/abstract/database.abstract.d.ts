@@ -4,6 +4,6 @@ import { ISharedContentRepository } from "./shared-content-repository.abstract";
 import { IUserRepository } from "./user.repository.abstract";
 export declare abstract class IDatabaseAbstract {
     abstract readonly users: IUserRepository<User>;
-    abstract readonly company: IReactionContentRepository<ReactionContent>;
-    abstract readonly products: ISharedContentRepository<SharedContent>;
+    abstract readonly reactionsContent: IReactionContentRepository<ReactionContent>;
+    abstract readonly sharedContent: ISharedContentRepository<SharedContent>;
 }

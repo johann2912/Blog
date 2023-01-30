@@ -37,7 +37,7 @@ __decorate([
     __metadata("design:type", user_entity_1.User)
 ], SharedContent.prototype, "user", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)((_type) => reaction_content_entity_1.ReactionContent, reactionContent => reactionContent.sharedContent),
+    (0, typeorm_1.OneToMany)((_type) => reaction_content_entity_1.ReactionContent, reactionContent => reactionContent.sharedContent),
     __metadata("design:type", reaction_content_entity_1.ReactionContent)
 ], SharedContent.prototype, "reactionContent", void 0);
 SharedContent = __decorate([
