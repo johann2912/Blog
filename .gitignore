@@ -1,8 +1,14 @@
 # Created by https://www.toptal.com/developers/gitignore/api/linux,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,windows
 
-node_modules
+/node_modules
 .env
+
+# compiled output
+/dist
+postgres_data
+redis_data
+
 
 ### Linux ###
 *~
