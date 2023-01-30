@@ -4,6 +4,7 @@ import { PgDatabaseModule } from './frameworks/pg/pg-data.module';
 import { RedisModule } from './frameworks/redis/redis.module';
 import { UserModule } from './module/user/user.module';
 import { AuthModule } from './module/auth/auth.module';
+import { SharedContentModule } from './module/shared-content/shared-content.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { AuthModule } from './module/auth/auth.module';
     RedisModule,
     UserModule,
     AuthModule,
+    SharedContentModule,
   ],
   controllers: [],
   providers: [],

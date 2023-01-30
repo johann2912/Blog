@@ -21,13 +21,13 @@ __decorate([
     __metadata("design:type", String)
 ], SharedContent.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: String }),
+    (0, typeorm_1.Column)({ type: String, nullable: true }),
     __metadata("design:type", String)
 ], SharedContent.prototype, "image", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: String }),
     __metadata("design:type", String)
-], SharedContent.prototype, "tittle", void 0);
+], SharedContent.prototype, "title", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: String }),
     __metadata("design:type", String)
