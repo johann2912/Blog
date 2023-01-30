@@ -14,6 +14,7 @@ const redis_module_1 = require("./frameworks/redis/redis.module");
 const user_module_1 = require("./module/user/user.module");
 const auth_module_1 = require("./module/auth/auth.module");
 const shared_content_module_1 = require("./module/shared-content/shared-content.module");
+const reaction_content_module_1 = require("./module/reaction-content/reaction-content.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -27,6 +28,7 @@ AppModule = __decorate([
             user_module_1.UserModule,
             auth_module_1.AuthModule,
             shared_content_module_1.SharedContentModule,
+            reaction_content_module_1.ContentReactionModule,
         ],
         controllers: [],
         providers: [],

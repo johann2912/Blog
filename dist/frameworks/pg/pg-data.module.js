@@ -29,7 +29,7 @@ PgDatabaseModule = __decorate([
                         username: configService.get('PGUSER'),
                         password: configService.get('PGPASSWORD'),
                         database: configService.get('PGDATABASE'),
-                        logging: false,
+                        logging: true,
                         entities: Object.values(entities),
                         synchronize: true,
                     };

@@ -5,6 +5,7 @@ import { RedisModule } from './frameworks/redis/redis.module';
 import { UserModule } from './module/user/user.module';
 import { AuthModule } from './module/auth/auth.module';
 import { SharedContentModule } from './module/shared-content/shared-content.module';
+import { ContentReactionModule } from './module/reaction-content/reaction-content.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { SharedContentModule } from './module/shared-content/shared-content.modu
     UserModule,
     AuthModule,
     SharedContentModule,
+    ContentReactionModule,
   ],
   controllers: [],
   providers: [],

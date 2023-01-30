@@ -15,7 +15,6 @@ export class ReactionContent extends Timestamp {
         (_type) => SharedContent, sharedContent => sharedContent.reactionContent
     )
     sharedContent?: SharedContent;
-
     @ManyToOne(
         (_type) => User, user => user.reactionContent
     )
